@@ -1,7 +1,7 @@
 /* পপআপ ওপেন হলে ব্যাকগ্রাউন্ডের ব্লার ইফেক্ট হালকা করার জন্য */
 .backdrop-blur-xs {
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 /* সাইডবার মেনু বা পপআপের ভেতরের অতিরিক্ত স্ক্রলবার লুকানোর জন্য */
@@ -15,6 +15,6 @@
 
 /* বাটনগুলোতে ক্লিক করলে প্রিমিয়াম টাচ রেসপন্স পাওয়ার জন্য */
 button:active, a:active {
-    transform: scale(0.97);
+    transform: scale(0.96);
     transition: transform 0.1s ease;
 }
