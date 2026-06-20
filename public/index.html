@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHAI88 - Premium Gaming Platform</title>
+    <title>BIKAS88 - Premium Gaming Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* কাস্টম সিএসএস স্ক্রলবার হাইড করার জন্য */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         body { background-color: #130d2e; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
     </style>
 </head>
@@ -22,7 +20,7 @@
         
         <div class="flex items-center gap-1">
             <span class="text-2xl font-black tracking-wider text-white">
-                <span class="text-amber-500">B</span>HAI88
+                <span class="text-amber-500">B</span>IKAS88
             </span>
         </div>
 
@@ -66,9 +64,8 @@
     <div id="globalOverlay" onclick="closeAllPanels()" class="fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-xs transition-opacity duration-300"></div>
 
     <div id="sidebarMenu" class="fixed inset-y-0 left-0 w-[85%] max-w-[360px] bg-[#1a1235] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto no-scrollbar pb-16">
-        
         <div class="flex justify-between items-center px-4 py-4 border-b border-purple-950/40 bg-[#140e2b]">
-            <span class="text-xl font-black text-white tracking-wide">BHAI88</span>
+            <span class="text-xl font-black text-white tracking-wide">BIKAS88</span>
             <button onclick="closeAllPanels()" class="text-gray-400 p-2 text-xl active:scale-75 transition"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
@@ -80,7 +77,7 @@
                 
                 <div class="grid grid-cols-2 gap-2 mt-3">
                     <button onclick="openAuthModal('register')" class="bg-white text-black font-black py-2.5 rounded-xl text-xs active:scale-95 transition">নিবন্ধন</button>
-                    <button onclick="openAuthModal('login')" class="bg-[#bc019b] text-white font-black py-2.5 rounded-xl text-xs active:scale-95 transition">প্রवेश করুন</button>
+                    <button onclick="openAuthModal('login')" class="bg-[#bc019b] text-white font-black py-2.5 rounded-xl text-xs active:scale-95 transition">প্রবেশ করুন</button>
                 </div>
             </div>
         </div>
@@ -89,46 +86,6 @@
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-house text-amber-400 text-xl"></i>বাড়ি</a>
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-cricket-bat-ball text-amber-400 text-xl"></i>ক্রিকেট</a>
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-cards text-amber-400 text-xl"></i>লাইভ ক্যাসিনো</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-dice text-amber-400 text-xl"></i>স্লট গেম</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-cubes text-amber-400 text-xl"></i>টেবিল গেম</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-plane-departure text-amber-400 text-xl"></i>ক্র্যাশ</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-basketball text-amber-400 text-xl"></i>স্পোর্টস</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-fish text-amber-400 text-xl"></i>মাছ ধরা</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-circle-dot text-amber-400 text-xl"></i>লটারি</a>
-        </div>
-
-        <div class="px-4 mt-2">
-            <a href="#" class="bg-[#231944] w-full py-3.5 rounded-xl flex flex-col items-center justify-center gap-1 text-[11px] font-bold text-gray-300 border border-purple-950/40">
-                <i class="fa-solid fa-percent text-amber-400 text-lg"></i>Promo
-            </a>
-        </div>
-
-        <div class="px-4 mt-3 grid grid-cols-2 gap-2">
-            <a href="#" class="bg-[#231944] py-3.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold text-white border border-purple-950/40">
-                <i class="fa-solid fa-users text-amber-400 text-base"></i>রেফারেল
-            </a>
-            <a href="#" class="bg-[#231944] py-3.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold text-white border border-purple-950/40">
-                <i class="fa-solid fa-crown text-amber-400 text-base"></i>ভিআইপি
-            </a>
-        </div>
-
-        <div class="mt-4 border-t border-purple-950/40 text-xs font-bold text-gray-300">
-            <a href="#" class="flex items-center justify-between px-5 py-4 border-b border-purple-950/20 hover:bg-purple-950/30">
-                <div class="flex items-center gap-3.5"><i class="fa-solid fa-gift text-amber-400 text-base"></i>অতিরিক্ত পুরস্কার</div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
-            </a>
-            <a href="#" class="flex items-center justify-between px-5 py-4 border-b border-purple-950/20 hover:bg-purple-950/30">
-                <div class="flex items-center gap-3.5"><i class="fa-solid fa-language text-amber-400 text-base"></i>ভাষা</div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
-            </a>
-            <a href="#" class="flex items-center justify-between px-5 py-4 border-b border-purple-950/20 hover:bg-purple-950/30">
-                <div class="flex items-center gap-3.5"><i class="fa-solid fa-headset text-amber-400 text-base"></i>গ্রাহক সেবা</div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
-            </a>
-            <a href="#" class="flex items-center justify-between px-5 py-4 border-b border-purple-950/20 hover:bg-purple-950/30">
-                <div class="flex items-center gap-3.5"><i class="fa-solid fa-download text-amber-400 text-base"></i>ডাউনলোড করুন</div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
-            </a>
         </div>
     </div>
 
@@ -136,7 +93,7 @@
         <div class="bg-[#1b143a] w-full max-w-sm rounded-2xl border border-purple-900/60 shadow-2xl overflow-hidden relative">
             
             <div class="flex justify-between items-center px-5 py-4 border-b border-purple-950/40 bg-[#150e2e]">
-                <span class="text-sm font-bold text-gray-200">প্রবেশ করুন / নিবন্ধন করুন</span>
+                <span class="text-sm font-bold text-gray-200">স্বাগতম BIKAS88</span>
                 <button onclick="closeAllPanels()" class="text-gray-400 hover:text-white text-lg active:scale-75 transition"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
@@ -146,17 +103,17 @@
             </div>
 
             <div class="p-5">
-                <form onsubmit="handleFormSubmit(event)" class="flex flex-col gap-4">
+                <form id="authForm" onsubmit="handleFormSubmit(event)" class="flex flex-col gap-4">
                     
                     <div class="relative">
                         <input type="text" id="authUsername" required placeholder="ইউজারনেম" class="w-full bg-[#110a26] border border-purple-900/60 rounded-xl px-4 py-3.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
                     </div>
 
                     <div id="phoneInputGroup" class="relative hidden">
-                        <input type="tel" id="authPhone" placeholder="মোাবাইল নাম্বার" class="w-full bg-[#110a26] border border-purple-900/60 rounded-xl px-4 py-3.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
+                        <input type="tel" id="authPhone" placeholder="মোবাইল নাম্বার" class="w-full bg-[#110a26] border border-purple-900/60 rounded-xl px-4 py-3.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
                     </div>
 
-                    <div class="relative flex items-center">
+                    <div class="relative">
                         <input type="password" id="authPassword" required placeholder="পাসওয়ার্ড" class="w-full bg-[#110a26] border border-purple-900/60 rounded-xl px-4 py-3.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
                     </div>
 
@@ -173,37 +130,32 @@
     </div>
 
     <script>
-        // ১. থ্রি-ডট বাটন বা হ্যামবার্গার মেনু টগল করার ফাংশন
+        let currentMode = 'login';
+
         function toggleMenu() {
             const sidebar = document.getElementById('sidebarMenu');
             const overlay = document.getElementById('globalOverlay');
-            
             if (sidebar.classList.contains('-translate-x-full')) {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // মেনু খুললে পেজ স্ক্রলিং অফ হবে
+                document.body.style.overflow = 'hidden';
             } else {
                 closeAllPanels();
             }
         }
 
-        // ২. হোমপেজ বা মেনু থেকে পপআপ খোলার মেইন ফাংশন
         function openAuthModal(type = 'login') {
-            // যদি সাইডবার মেনু খোলা থাকে, তবে সেটি আগে স্লাইড হয়ে বন্ধ হবে
             const sidebar = document.getElementById('sidebarMenu');
             if (sidebar) sidebar.classList.add('-translate-x-full');
             
-            // এবার পপআপ ও ব্যাকগ্রাউন্ড ওভারলে চালু হবে
             document.getElementById('globalOverlay').classList.remove('hidden');
             document.getElementById('authModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            
-            // ইউজার যে ট্যাব সিলেক্ট করেছে (লগইন বা রেজিস্ট্রেশন) তা একটিভ করবে
             switchTab(type);
         }
 
-        // ৩. লগইন ও নিবন্ধন ট্যাব অদল-বদল করার লজিক
         function switchTab(type) {
+            currentMode = type;
             const tabLogin = document.getElementById('tabLogin');
             const tabRegister = document.getElementById('tabRegister');
             const phoneGroup = document.getElementById('phoneInputGroup');
@@ -228,42 +180,57 @@
             }
         }
 
-        // ৪. নিচের অল্টারনেটিভ বাটনে ক্লিক করলে ট্যাব চেঞ্জ হবে
         function toggleAuthType() {
-            const submitBtn = document.getElementById('authSubmitBtn');
-            if (submitBtn.innerText === "প্রবেশ করুন") {
+            if (currentMode === 'login') {
                 switchTab('register');
             } else {
                 switchTab('login');
             }
         }
 
-        // ৫. সবকিছু একসাথে বন্ধ করার ক্লিয়ার ফাংশন
         function closeAllPanels() {
-            const sidebar = document.getElementById('sidebarMenu');
-            const authModal = document.getElementById('authModal');
-            const overlay = document.getElementById('globalOverlay');
-            
-            if (sidebar) sidebar.classList.add('-translate-x-full');
-            if (authModal) authModal.classList.add('hidden');
-            if (overlay) overlay.classList.add('hidden');
-            
-            document.body.style.overflow = ''; // স্ক্রলিং আবার চালু করবে
+            if (document.getElementById('sidebarMenu')) document.getElementById('sidebarMenu').add('-translate-x-full');
+            document.getElementById('sidebarMenu').classList.add('-translate-x-full');
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('globalOverlay').classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
-        // ৬. ফর্ম সাবমিট রিকোয়েস্ট হ্যান্ডেলার
-        function handleFormSubmit(e) {
+        // রিয়েল সার্ভার এপিআই কানেকশন
+        async function handleFormSubmit(e) {
             e.preventDefault();
-            const submitBtn = document.getElementById('authSubmitBtn');
             
-            if (submitBtn.innerText === "প্রবেশ করুন") {
-                alert("লগইন রিকোয়েস্ট সফল হয়েছে!");
-            } else {
-                alert("রেজিস্ট্রেশন রিকোয়েস্ট সফল হয়েছে! এবার লগইন করুন।");
-                switchTab('login');
-                return;
+            const username = document.getElementById('authUsername').value;
+            const password = document.getElementById('authPassword').value;
+            const phone = document.getElementById('authPhone').value;
+
+            const endpoint = currentMode === 'login' ? '/api/login' : '/api/register';
+            const payload = currentMode === 'login' ? { username, password } : { username, password, phone };
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert(data.message);
+                    if (currentMode === 'register') {
+                        switchTab('login');
+                    } else {
+                        closeAllPanels();
+                        // লগইন সফল হলে টোকেন বা ইউজার ডেটা সেভ করা যাবে (যেমন: localStorage.setItem('token', data.token))
+                    }
+                } else {
+                    alert("ভুল হয়েছে: " + data.error);
+                }
+            } catch (error) {
+                alert("সার্ভার কানেকশনে সমস্যা হচ্ছে!");
+                console.error("Error:", error);
             }
-            closeAllPanels();
         }
     </script>
 </body>
