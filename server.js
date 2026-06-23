@@ -8,23 +8,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ফায়ারবেস কানেকশন (নতুন এবং ১০০% নিরাপদ পদ্ধতি)
+// ফায়ারবেস সিক্রেট ফাইল রিড করার নিয়ম
 try {
-    const privateKey = process.env.FIREBASE_PRIVATE_KEY;
-    
-    if (!privateKey) {
-        console.error("Error: FIREBASE_PRIVATE_KEY is missing!");
-    } else {
-        if (!admin.apps.length) {
-            admin.initializeApp({
-                credential: admin.credential.cert({
-                    projectId: "bikas88",
-                    clientEmail: "firebase-adminsdk-fbsvc@bikas88.iam.gserviceaccount.com",
-                    privateKey: privateKey.replace(/\\n/g, '\n')
-                })
-            });
-            console.log("🔥 Firebase Admin SDK Connected Successfully!");
-        }
+    if (!admin.apps.length) {
+        admin.initializeApp({
+            credential: admin.credential.cert('/opt/render/project/src/firebase.json')
+        });
+        console.log("🔥 Firebase Admin SDK Connected Successfully via File!");
     }
 } catch (error) {
     console.error("❌ Firebase Initialization Error:", error.message);
