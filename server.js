@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const admin = require('firebase-admin');
 require('dotenv').config();
 
