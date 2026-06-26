@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIKAS88 - Premium Gaming Platform</title>
+    <!-- Tailwind CSS এবং FontAwesome আইকন লোডার -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- আপনার নিজস্ব style.css ফাইলটির সংযোগ এখানে দেওয়া হলো -->
+    <link rel="stylesheet" href="/style.css">
     <style>
-        /* কাস্টম সিএসএস স্ক্রলবার হাইড করার জন্য */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         body { background-color: #130d2e; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
     </style>
 </head>
 <body class="bg-[#130d2e] text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
 
+    <!-- হেডার মেনু সেকশন -->
     <header class="bg-[#140e2b] px-4 py-3 flex items-center justify-between border-b border-purple-950/40 sticky top-0 z-40 shadow-md">
         <button onclick="toggleMenu()" class="text-gray-200 text-xl p-1 focus:outline-none active:scale-90 transition">
             <i class="fa-solid fa-bars"></i>
@@ -22,7 +23,7 @@
         
         <div class="flex items-center gap-1">
             <span class="text-2xl font-black tracking-wider text-white">
-                <span class="text-amber-500">B</span>HAI88
+                <span class="text-amber-500">B</span>IKAS88
             </span>
         </div>
 
@@ -32,6 +33,7 @@
         </div>
     </header>
 
+    <!-- মূল কন্টেন্ট এবং ব্যানার -->
     <main class="flex-1 w-full max-w-md mx-auto pb-24">
         
         <div class="p-3">
@@ -44,6 +46,7 @@
             </div>
         </div>
 
+        <!-- লগইন এবং রেজিস্ট্রেশন বাটন -->
         <div class="grid grid-cols-2 w-full shadow-xl border-y border-purple-950/40">
             <button onclick="openAuthModal('login')" class="bg-[#191238] text-[#ffc107] font-black py-4 text-base tracking-wide border-r border-purple-950/60 active:bg-purple-950/40 transition">
                 প্রবেশ করুন
@@ -53,22 +56,25 @@
             </button>
         </div>
 
+        <!-- গেম ক্যাটাগরি কার্ডসমূহ -->
         <div class="p-4">
             <h3 class="text-xs font-black text-gray-400 uppercase tracking-wider mb-3">জনপ্রিয় গেম ক্যাটাগরি</h3>
             <div class="grid grid-cols-3 gap-2 text-center text-[11px] font-bold text-gray-300">
                 <div class="bg-[#1b143a] p-4 rounded-xl border border-purple-950/40"><i class="fa-solid fa-fire text-pink-500 text-xl mb-1.5"></i><p>হট গেমস</p></div>
-                <div class="bg-[#1b143a] p-4 rounded-xl border border-purple-950/40"><i class="fa-solid fa-cricket-bat-ball text-amber-400 text-xl mb-1.5"></i><p>ক্রিকেট</p></div>
-                <div class="bg-[#1b143a] p-4 rounded-xl border border-purple-950/40"><i class="fa-solid fa-cards text-amber-400 text-xl mb-1.5"></i><p>ক্যাসিনো</p></div>
+                <div class="bg-[#1b143a] p-4 rounded-xl border border-purple-950/40"><i class="fa-solid fa-baseball text-amber-400 text-xl mb-1.5"></i><p>ক্রিকেট</p></div>
+                <div class="bg-[#1b143a] p-4 rounded-xl border border-purple-950/40"><i class="fa-solid fa-diamond text-amber-400 text-xl mb-1.5"></i><p>ক্যাসিনো</p></div>
             </div>
         </div>
     </main>
 
+    <!-- ব্লার ব্যাকগ্রাউন্ড ব্যাকড্রপ ওভারলে -->
     <div id="globalOverlay" onclick="closeAllPanels()" class="fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-xs transition-opacity duration-300"></div>
 
+    <!-- সাইডবার নেভিগেশন মেনু দরাজ -->
     <div id="sidebarMenu" class="fixed inset-y-0 left-0 w-[85%] max-w-[360px] bg-[#1a1235] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto no-scrollbar pb-16">
         
         <div class="flex justify-between items-center px-4 py-4 border-b border-purple-950/40 bg-[#140e2b]">
-            <span class="text-xl font-black text-white tracking-wide">BHAI88</span>
+            <span class="text-xl font-black text-white tracking-wide">BIKAS88</span>
             <button onclick="closeAllPanels()" class="text-gray-400 p-2 text-xl active:scale-75 transition"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
@@ -80,15 +86,16 @@
                 
                 <div class="grid grid-cols-2 gap-2 mt-3">
                     <button onclick="openAuthModal('register')" class="bg-white text-black font-black py-2.5 rounded-xl text-xs active:scale-95 transition">নিবন্ধন</button>
-                    <button onclick="openAuthModal('login')" class="bg-[#bc019b] text-white font-black py-2.5 rounded-xl text-xs active:scale-95 transition">প্রवेश করুন</button>
+                    <button onclick="openAuthModal('login')" class="bg-[#bc019b] text-white font-black py-2.5 rounded-xl text-xs active:scale-95 transition">প্রবেশ করুন</button>
                 </div>
             </div>
         </div>
 
+        <!-- মেনু লিংকস ক্যাটাগরি -->
         <div class="px-4 grid grid-cols-3 gap-2 text-center text-[11px] font-bold text-gray-300">
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-house text-amber-400 text-xl"></i>বাড়ি</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-cricket-bat-ball text-amber-400 text-xl"></i>ক্রিকেট</a>
-            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-cards text-amber-400 text-xl"></i>লাইভ ক্যাসিনো</a>
+            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-baseball text-amber-400 text-xl"></i>ক্রিকেট</a>
+            <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-diamond text-amber-400 text-xl"></i>লাইভ ক্যাসিনো</a>
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-dice text-amber-400 text-xl"></i>স্লট গেম</a>
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-cubes text-amber-400 text-xl"></i>টেবিল গেম</a>
             <a href="#" class="bg-[#231944] py-4 rounded-xl flex flex-col items-center gap-2 border border-purple-950/40"><i class="fa-solid fa-plane-departure text-amber-400 text-xl"></i>ক্র্যাশ</a>
@@ -132,6 +139,7 @@
         </div>
     </div>
 
+    <!-- অথেনটিকেশন মডাল পপআপ (লগইন এবং নিবন্ধন) -->
     <div id="authModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 transition-all duration-300">
         <div class="bg-[#1b143a] w-full max-w-sm rounded-2xl border border-purple-900/60 shadow-2xl overflow-hidden relative">
             
@@ -153,7 +161,7 @@
                     </div>
 
                     <div id="phoneInputGroup" class="relative hidden">
-                        <input type="tel" id="authPhone" placeholder="মোাবাইল নাম্বার" class="w-full bg-[#110a26] border border-purple-900/60 rounded-xl px-4 py-3.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
+                        <input type="tel" id="authPhone" placeholder="মোবাইল নাম্বার" class="w-full bg-[#110a26] border border-purple-900/60 rounded-xl px-4 py-3.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
                     </div>
 
                     <div class="relative flex items-center">
@@ -172,37 +180,29 @@
         </div>
     </div>
 
+    <!-- স্ক্রিপ্টস কনফিগারেশন -->
     <script>
-        // ১. থ্রি-ডট বাটন বা হ্যামবার্গার মেনু টগল করার ফাংশন
         function toggleMenu() {
             const sidebar = document.getElementById('sidebarMenu');
             const overlay = document.getElementById('globalOverlay');
-            
             if (sidebar.classList.contains('-translate-x-full')) {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // মেনু খুললে পেজ স্ক্রলিং অফ হবে
+                document.body.style.overflow = 'hidden';
             } else {
                 closeAllPanels();
             }
         }
 
-        // ২. হোমপেজ বা মেনু থেকে পপআপ খোলার মেইন ফাংশন
         function openAuthModal(type = 'login') {
-            // যদি সাইডবার মেনু খোলা থাকে, তবে সেটি আগে স্লাইড হয়ে বন্ধ হবে
             const sidebar = document.getElementById('sidebarMenu');
             if (sidebar) sidebar.classList.add('-translate-x-full');
-            
-            // এবার পপআপ ও ব্যাকগ্রাউন্ড ওভারলে চালু হবে
             document.getElementById('globalOverlay').classList.remove('hidden');
             document.getElementById('authModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            
-            // ইউজার যে ট্যাব সিলেক্ট করেছে (লগইন বা রেজিস্ট্রেশন) তা একটিভ করবে
             switchTab(type);
         }
 
-        // ৩. লগইন ও নিবন্ধন ট্যাব অদল-বদল করার লজিক
         function switchTab(type) {
             const tabLogin = document.getElementById('tabLogin');
             const tabRegister = document.getElementById('tabRegister');
@@ -228,7 +228,6 @@
             }
         }
 
-        // ৪. নিচের অল্টারনেটিভ বাটনে ক্লিক করলে ট্যাব চেঞ্জ হবে
         function toggleAuthType() {
             const submitBtn = document.getElementById('authSubmitBtn');
             if (submitBtn.innerText === "প্রবেশ করুন") {
@@ -238,23 +237,31 @@
             }
         }
 
-        // ৫. সবকিছু একসাথে বন্ধ করার ক্লিয়ার ফাংশন
         function closeAllPanels() {
             const sidebar = document.getElementById('sidebarMenu');
             const authModal = document.getElementById('authModal');
             const overlay = document.getElementById('globalOverlay');
-            
             if (sidebar) sidebar.classList.add('-translate-x-full');
             if (authModal) authModal.classList.add('hidden');
             if (overlay) overlay.classList.add('hidden');
-            
-            document.body.style.overflow = ''; // স্ক্রলিং আবার চালু করবে
+            document.body.style.overflow = '';
         }
 
-        // ৬. ফর্ম সাবমিট রিকোয়েস্ট হ্যান্ডেলার
         function handleFormSubmit(e) {
             e.preventDefault();
             const submitBtn = document.getElementById('authSubmitBtn');
+            if (submitBtn.innerText === "প্রবেশ করুন") {
+                alert("লগইন রিকোয়েস্ট সফল হয়েছে!");
+            } else {
+                alert("রেজিস্ট্রেশন রিকোয়েস্ট সফল হয়েছে! এবার লগইন করুন।");
+                switchTab('login');
+                return;
+            }
+            closeAllPanels();
+        }
+    </script>
+</body>
+</html>            const submitBtn = document.getElementById('authSubmitBtn');
             
             if (submitBtn.innerText === "প্রবেশ করুন") {
                 alert("লগইন রিকোয়েস্ট সফল হয়েছে!");
