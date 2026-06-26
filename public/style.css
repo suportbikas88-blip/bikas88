@@ -1,19 +1,25 @@
-/* পপআপ ওপেন হলে ব্যাকগ্রাউন্ডের ব্লার ইফেক্ট হালকা করার জন্য */
+/* পুরো ওয়েবসাইটের মূল ব্যাকগ্রাউন্ড ও টেক্সটের প্রিমিয়াম স্টাইল */
+html, body {
+    background-color: #130d2e !important;
+    color: #ffffff !important;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .backdrop-blur-xs {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 }
 
-/* সাইডবার মেনু বা পপআপের ভেতরের অতিরিক্ত স্ক্রলবার লুকানোর জন্য */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE/Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* বাটনগুলোতে ক্লিক করলে প্রিমিয়াম টাচ রেসপন্স পাওয়ার জন্য */
 button:active, a:active {
     transform: scale(0.97);
     transition: transform 0.1s ease;
